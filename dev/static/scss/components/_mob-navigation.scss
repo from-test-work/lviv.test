@@ -1,0 +1,58 @@
+.mob-navigation{
+    position: fixed;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    &__item{
+        flex: 1 1 auto;
+        background-color: #f0f1f6;
+        > a{
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+/*
+* @section      Components
+* @Components	Mobile toogler
+*/
+
+.m-toggler {
+    cursor: pointer;
+    &-bars {
+        display: flex;
+        flex-direction: column;
+        // padding: 10px;
+    }
+    &__bar {
+        width: 16px;
+        height: 2px;
+        background: #ffffff;
+        transition: 0.3s ease all;
+    }
+    &__bar+* {
+        margin-top: 4px;
+    }
+    &--opened {
+        z-index: 999;
+        .m-toggler__bar {
+            background: transparent;
+            &:first-child {
+                width: 16px;
+                background: #ffffff;
+                transform: rotate(45deg) translate(4px, 4.5px)
+            }
+            &:last-child {
+                width: 16px;
+                background: #ffffff;
+                transform: rotate(-45deg) translate(4px, -4.5px)
+            }
+        }
+    }
+}

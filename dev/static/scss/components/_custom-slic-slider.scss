@@ -1,0 +1,147 @@
+.sl{
+  margin: 0 auto 90px;
+  &__slide{
+    position: relative;
+  }
+  &__cnt{
+    position: absolute;
+    top: 50%;
+    left: 70px;
+    width: 500px;
+    height: 128px;
+    padding: 20px 30px;
+    background-color: #d2a66b;
+    opacity: 0.88;
+    transform: translateY(-50%);
+  }
+  &__title{
+    color: #ffffff;
+    font-family: $custom-font-family;
+    font-size: 43px;
+    line-height: 43px;
+    font-weight: 400;
+  }
+  &__img{
+    &[hidden="true"]{
+      display: none;
+    }
+    &[hidden="false"]{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 47px;
+}
+
+// slick dottet style
+.slick-dots{
+  bottom: -47px;
+}
+
+.slick-dots li {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #cb944c;
+  margin: 0 11px;
+  opacity: 0.33;
+}
+.slick-dots li.slick-active{
+  background-color: #cb944c;
+  opacity: 1;
+}
+
+.slick-dots li button:before{
+  content: '';
+}
+
+// slick arrow style
+.slick-prev{
+  left: 0;
+  &:before{
+    content: '\f053';
+  }
+}
+.slick-next{
+  right: 0;
+  &:before{
+    content: '\f054';
+  }
+}
+
+.slick-prev,
+.slick-next{
+  width: 37px;
+  height: 128px;
+  z-index: 1;
+  background: #d2a66b;
+  opacity: 0.88;
+  &:before{
+    width: 37px;
+    height: 128px;
+    font-family: 'FontAwesome';
+  }
+}
+
+
+.slick-prev,
+.slick-next{
+  &:hover{
+    background: #fff !important;
+  }
+  &:hover:before{
+    color: #d2a66b !important;
+    opacity: 1;
+  }
+  &:focus{
+    background: #d2a66b;
+  }
+  &:focus:before{
+    color: #fff;
+  }
+}
+
+.sl + *{
+  margin-top: 100px;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .sl{
+    margin: 0 -15px 0;
+    &__cnt{
+      width: 60%;
+      height: auto;
+      padding: 6px 8px; 
+    }
+    &__title{
+      font-size: 25px;
+      line-height: 1.2;
+    }
+  }
+  
+  .slick-prev,
+  .slick-next{
+    width: 20px;
+    height: 28px;
+  }
+  .slick-dots{
+    bottom: 20px;
+    li {
+      width: 10px;
+      height: 10px;
+      button{
+        width: 10px;
+        height: 10px
+      }
+    }
+  } 
+  
+  .slick-dotted.slick-slider{
+    margin-bottom: 0;
+  }  
+}

@@ -1,0 +1,401 @@
+* {
+  box-sizing: border-box;
+  // background: rgba(#000, 0.05);
+}
+
+// Transition
+@mixin transition($trsn) {
+  -moz-transition: $trsn;
+  -o-transition: $trsn;
+  -webkit-transition: $trsn;
+  transition: $trsn;
+}
+
+
+// Transform
+@mixin transform($trfm) {
+  -moz-transform: $trfm;
+  -ms-transform: $trfm;
+  -o-transform: $trfm;
+  -webkit-transform: $trfm;
+  transform: $trfm;
+}
+
+// Border Radius
+@mixin border-radius($border-radius) {
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  border-radius: $border-radius;
+}
+
+@mixin border-top-radius($btlr) {
+  -webkit-border-top-left-radius: $btlr;
+  -webkit-border-top-right-radius: $btlr;
+  -moz-border-radius-topleft: $btlr;
+  -moz-border-radius-topright: $btlr;
+  border-top-left-radius: $btlr;
+  border-top-right-radius: $btlr;
+}
+
+@mixin border-bottom-radius($btlr) {
+  -webkit-border-bottom-right-radius: $btlr;
+  -webkit-border-bottom-left-radius: $btlr;
+  -moz-border-radius-bottomright: $btlr;
+  -moz-border-radius-bottomleft: $btlr;
+  border-bottom-right-radius: $btlr;
+  border-bottom-left-radius: $btlr;
+}
+
+@mixin border-left-radius($btlr) {
+  -webkit-border-top-left-radius: $btlr;
+  -webkit-border-bottom-left-radius: $btlr;
+  -moz-border-radius-topleft: $btlr;
+  -moz-border-radius-bottomleft: $btlr;
+  border-top-left-radius: $btlr;
+  border-bottom-left-radius: $btlr;
+}
+
+@mixin border-right-radius($btlr) {
+  -webkit-border-top-right-radius: $btlr;
+  -webkit-border-bottom-right-radius: $btlr;
+  -moz-border-radius-topright: $btlr;
+  -moz-border-radius-bottomright: $btlr;
+  border-top-right-radius: $btlr;
+  border-bottom-right-radius: $btlr;
+}
+
+//  Fonts
+$default-font-family: $custom-font-family;
+$default-font-weight: 300;
+$default-font-size: 15px;
+$default-line-height: 24px;
+
+//$materialicons: 'Material Icons';
+//$material: "Material Design Icons";
+//$linecons: 'Linecons';
+//$fa: 'FontAwesome';
+
+//  Colors
+$white: #ffffff;
+$black: #000000;
+$gray: #b9b8bd;
+$default: #393939;
+
+$primary: #4399da;
+$secondary-1: #a9b1b3;
+$secondary-2: #d83a1f;
+$secondary-3: #ffd303;
+
+$link-color: #3366BB;
+$error-color: #FF0000;
+$success-color: #00FF00;
+
+$header-color: $default;
+$header-bg: $default;
+
+$content-color: $default;
+$content-bg: $white;
+
+$footer-color: $default;
+$footer-bg: lighten(saturate(adjust-hue($default, 0.0000), 0.0000), 2.3529);
+
+/*==========================================================================*/
+// default style
+$form--fsz: inherit !default;
+$form--lh: 1.2;
+$form--fw: inherit !default;
+$form--color: $gray !default;
+$form--border-sise: 1px !default;
+$form--border: $form--border-sise solid $form--color !default;
+//$form--border-radius: 4+'px';
+$form--border-radius: 4px;
+// input style
+$form-input--height: 40px !default;
+$form-input--line-height: 40px !default;
+$form-input--padding-left: 10px !default;
+$form-input--padding-right: 10px !default;
+// textarea style
+$form-textarea--height: 100px !default;
+// color validate
+$form-control--danger-color: red;
+$form-control--warning-color: orange;
+$form-control--valid-color: green;
+// icon validate style
+$form-validationIcon--width: 14px;
+$form-validationIcon--height: 14px;
+$form-validationIcon--pull-right: 5px;
+$form-validationIcon--pull-left: 5px;
+
+$background: $white;
+
+.form-group {
+  position: relative;
+  &.has-validcon-right {
+    .form-input {
+      padding-right: calc(#{$form-validationIcon--width} + (#{$form-validationIcon--pull-right} * 2));
+    }
+  }
+
+  &.has-validcon-left {
+    .form-input {
+      padding-left: calc(#{$form-validationIcon--width} + (#{$form-validationIcon--pull-left} * 2));
+    }
+  }
+
+  label {
+    display: block;
+    position: relative;
+    .form-validationText {
+      position: absolute;
+      display: block;
+      width: 100%;
+      //bottom: -16px;
+    }
+    .form-validationIcon-right,
+    .form-validationIcon-left {
+      position: absolute;
+      top: 50%;
+      width: $form-validationIcon--width;
+      height: $form-validationIcon--height;
+      border-radius: 50%;
+      background: #000;
+      transform: translateY(-50%);
+    }
+
+    .form-validationIcon-right {
+      right: $form-validationIcon--pull-right;
+    }
+
+    .form-validationIcon-left {
+      left: $form-validationIcon--pull-left;
+    }
+  }
+
+  //input styles
+  .form-input {
+    display: block;
+    text-align: left;
+    outline: none;
+    width: 100%;
+    background: $background;
+    border: $form--border;
+    height: $form-input--height;
+    padding-left: $form-input--padding-left;
+    padding-right: $form-input--padding-right;
+    -webkit-appearance: none;
+    border-radius: $form--border-radius;
+  }
+  .search-submit {
+    &__right {
+      input[type="submit"] {
+        right: $form--border-sise;
+      }
+      .form-input {
+        padding-right: calc(#{$form-input--height} + 5px);
+      }
+    }
+    input[type="submit"] {
+      position: absolute;
+      width: calc(#{$form-input--height} - (#{$form--border-sise} * 2));
+      height: calc(#{$form-input--height} - (#{$form--border-sise} * 2));
+      top: $form--border-sise;
+      border: none;
+      background: url("../../static/img/search.png") no-repeat center center;
+    }
+  }
+
+  @if ($form--border-radius != '0px') {
+    .search-submit__left {
+      input[type="submit"] {
+        @include border-left-radius($form--border-radius);
+      }
+    }
+    .search-submit__right {
+      input[type="submit"] {
+        @include border-right-radius($form--border-radius);
+      }
+    }
+  }
+}
+
+//placeholder-overflow
+.placeholder-overflow {
+  input[placeholder] {
+    text-overflow: ellipsis;
+  }
+  input::-moz-placeholder {
+    text-overflow: ellipsis;
+  }
+  input:-moz-placeholder {
+    text-overflow: ellipsis;
+  }
+  input:-ms-input-placeholder {
+    text-overflow: ellipsis;
+  }
+}
+
+//placeholder-color
+.placeholder-color {
+  ::-webkit-input-placeholder {
+    color: $gray;
+  }
+  ::-moz-placeholder {
+    color: $gray;
+  }
+  :-moz-placeholder {
+    color: $gray;
+  }
+  :-ms-input-placeholder {
+    color: $gray;
+  }
+}
+
+
+//placeholder-effect
+.placeholder-effect1 {
+  :focus::-webkit-input-placeholder {
+    color: transparent
+  }
+  :focus::-moz-placeholder {
+    color: transparent
+  }
+  :focus:-moz-placeholder {
+    color: transparent
+  }
+  :focus:-ms-input-placeholder {
+    color: transparent
+  }
+}
+
+.placeholder-effect2 {
+  ::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  ::-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  :-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  :-ms-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  :focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  :focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  :focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  :focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.placeholder-effect3 {
+  ::-webkit-input-placeholder {
+    text-indent: 0;
+    transition: text-indent 0.3s ease;
+  }
+  ::-moz-placeholder {
+    text-indent: 0;
+    transition: text-indent 0.3s ease;
+  }
+  :-moz-placeholder {
+    text-indent: 0;
+    transition: text-indent 0.3s ease;
+  }
+  :-ms-input-placeholder {
+    text-indent: 0;
+    transition: text-indent 0.3s ease;
+  }
+  :focus::-webkit-input-placeholder {
+    text-indent: 500px;
+    transition: text-indent 0.3s ease;
+  }
+  :focus::-moz-placeholder {
+    text-indent: 500px;
+    transition: text-indent 0.3s ease;
+  }
+  :focus:-moz-placeholder {
+    text-indent: 500px;
+    transition: text-indent 0.3s ease;
+  }
+  :focus:-ms-input-placeholder {
+    text-indent: 500px;
+    transition: text-indent 0.3s ease;
+  }
+}
+
+.placeholder-effect4 {
+  ::-webkit-input-placeholder {
+    line-height: 20px;
+    transition: line-height 0.5s ease;
+  }
+  ::-moz-placeholder {
+    line-height: 20px;
+    transition: line-height 0.5s ease;
+  }
+  :-moz-placeholder {
+    line-height: 20px;
+    transition: line-height 0.5s ease;
+  }
+  :-ms-input-placeholder {
+    line-height: 20px;
+    transition: line-height 0.5s ease;
+  }
+  :focus::-webkit-input-placeholder {
+    line-height: 100px;
+    transition: line-height 0.5s ease;
+  }
+  :focus::-moz-placeholder {
+    line-height: 100px;
+    transition: line-height 0.5s ease;
+  }
+  :focus:-moz-placeholder {
+    line-height: 100px;
+    transition: line-height 0.5s ease;
+  }
+  :focus:-ms-input-placeholder {
+    line-height: 100px;
+    transition: line-height 0.5s ease;
+  }
+}
+
+// coded by Belkins & AlexB.
+
+
+
+
+@media screen and (min-width:768px) and (max-width:1199px) {
+  .form-group{
+    .form-input {
+      height: 30px;
+      font-size: 10px
+    }
+
+    .search-submit{
+      &__right{
+        .form-input{
+          padding-right: calc(25px + 5px);
+        }
+      }
+
+      input[type="submit"]{
+        background-size: 40%;
+        width: calc(30px - (1px * 2));
+        height: calc(30px - (1px * 2));
+      }    
+    }
+  }
+}

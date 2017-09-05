@@ -1,0 +1,20 @@
+.contact{
+  margin-top: -7px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 2;
+  flex-shrink: 2;
+  &__phone{
+    letter-spacing: -0.65px;    
+  }
+  &__work{}
+}
+
+.contact{
+  &__phone + &__work{
+    margin-left: 15px;
+  }
+}

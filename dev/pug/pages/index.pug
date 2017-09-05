@@ -1,0 +1,30 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная'
+
+block content
+	main.content
+		.wrapper
+			.sl
+				.sl__slide
+					img.sl__img(src="static/img/slick-slide.png" alt="" data-attr="web")
+					img.sl__img(src="static/img/m-slide.jpg" alt="" data-attr="ios")
+			
+					.sl__cnt
+						.sl__title Новая коллекция<br/>SWAROVSKI уже здесь!
+				.sl__slide
+					img.sl__img(src="static/img/slick-slide.png" alt="" data-attr="web")
+					img.sl__img(src="https://static.tumblr.com/24d4dfbfa5b3fbd58479ab946c2b2dc7/dlnhnqs/0pcn57yzy/tumblr_static_tumblr_static_74h9asozl6gwgg0ookkc4gow4_640.jpg" alt="" data-attr="ios")
+					
+					.sl__cnt
+						.sl__title НоваЯ коллекция<br/>SWAROVSKI уже здесь!
+				.sl__slide
+					img.sl__img(src="static/img/slick-slide.png" alt="" data-attr="web")
+					img.sl__img(src="https://static.tumblr.com/3c837d2cb829181d4fddd8c1c8e76073/ljdo11l/DbVobzj45/tumblr_static_tumblr_static__640.jpg" alt="" data-attr="ios")
+					.sl__cnt
+						.sl__title Новая коллекция<br/>SWAROVSKI уже здесь!
+
+
+block script
+	script(src="static/js/components/slick.min.js")

@@ -1,0 +1,110 @@
+include ../mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+		meta(name="format-detection" content="telephone=no")
+		meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1")
+		meta(name="keywords" content="")
+		title #{title}
+
+		//- favicon block start
+		//- favicon block end
+
+
+		link(rel="stylesheet" type='text/css' href="static/css/style.css")
+		
+		//BEGIN BODY
+		body.loaded
+			
+			ul.mob-navigation
+				li.mob-navigation__item
+					a.menu-trigger.m-toggler(id="m-toggler" href="#")
+						.m-toggler-bars
+							.m-toggler__bar
+							.m-toggler__bar
+							.m-toggler__bar
+					nav#slide-menu.nav
+						-var slideMenuList = [{href: "katalog", text: 'Каталог товаров'}, {href: "work", text: 'Условия работы'}, {href: "sales", text: 'Скидки'}, {href: "payment_and_delivery", text: 'Оплата и доставка'}, {href: "documents", text: 'Документы'}, {href: "contact", text: 'Контакты'}];
+						ul.nav__list
+							li.nav__item.has-submenu
+								a.nav__link(href="#") Каталог товаров
+
+								ul.nav-dropdown
+									li.nav-dropdown__item
+										a.nav-dropdown__link(href="#") Свадебная бижутерия
+									li.nav-dropdown__item
+										a.nav-dropdown__link(href="#") Аксессуары для волос
+									li.nav-dropdown__item
+										a.nav-dropdown__link(href="#") Броши
+									li.nav-dropdown__item.has-dropdown
+										a.nav-dropdown__link(href="#") Мужские аксессуары
+
+										ul.nav-dropdown
+											li.nav-dropdown__item.nav-dropdown__title МУЖСКАЯ БИЖУТЕРИЯ
+											li.nav-dropdown__item
+												a.nav-dropdown__link(href="#") Браслеты
+											li.nav-dropdown__item
+												a.nav-dropdown__link(href="#") Кулоны
+											li.nav-dropdown__item
+												a.nav-dropdown__link(href="#") Зажимы и запонки
+									li.nav-dropdown__item
+										a.nav-dropdown__link(href="#") Клатчи
+									li.nav-dropdown__item
+										a.nav-dropdown__link(href="#") Детская бижутерия
+									li.nav-dropdown__item
+										a.nav-dropdown__link(href="#") Демонстрационное оборудование
+
+							li.nav__item
+								a.nav__link(href="#") Условия работы
+							li.nav__item
+								a.nav__link(href="#") Скидки
+							li.nav__item
+								a.nav__link(href="#") Оплата и доставка
+							li.nav__item
+								a.nav__link(href="#") Документы
+							li.nav__item
+								a.nav__link(href="#") Контакты
+
+				li.mob-navigation__item
+					a.m-home(href="/")
+						img(src="../static/img/m.home.png", alt="m-home" width="20", height="16")
+				li.mob-navigation__item
+					a.m-search(id="m-search" href="#")
+						img(src="../static/img/m.search.png", alt="m-search")
+				li.mob-navigation__item
+					a.m-cart(href="#")
+						img(src="../static/img/m.cart.png", alt="m-cart")
+				li.mob-navigation__item
+					a.m-user(href="#")
+						img(src="../static/img/m.user.png", alt="m-user")
+				li.mob-navigation__item
+					a.m-phone(href="tel:+78007078139")
+						img(src="../static/img/m.phone.png", alt="m-phone")
+
+			.main-wrapper
+				//BEGIN CONTENT
+				block content
+
+
+				//CONTENT EOF
+
+				//BEGIN HEADER
+				include ../modules/header
+				//HEADER EOF
+
+				//BEGIN FOOTER
+				include ../modules/footer
+				//FOOTER EOF
+
+			.icon-load
+		//BODY EOF
+
+		script(src="static/js/jquery-3.0.0.min.js")
+		script(src="static/js/jquery-migrate-1.4.1.min.js")
+
+		block script
+
+		script(src="static/js/custom.js")

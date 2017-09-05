@@ -1,0 +1,77 @@
+header
+    .wrapper
+        .header-component-top
+            // - Brand -
+            .brand
+                a.brand__logo(href='/')
+                    img.brand__img(src="../static/img/brand.png", alt="brand logo")
+                .brand__text Интернет-магазин «Благой арт»
+
+            // - Search -
+            form#form-search.form-search(action="#")
+                .form-group.placeholder-color.placeholder-effect2.placeholder-overflow
+                    label.search-submit.search-submit__right
+                        input.form-input(type='search', placeholder='Введите название или артикул')
+                        input(type='submit', value='')
+
+            // - Contact Info -
+            .contact
+                .contact__phone
+                    a.phone(href="tel:+78007078139") +7 (800) 707-81-39
+                .contact__work.work
+                    .work__week ПН-ПТ с 9:00 до 18:00
+                    .work__delivery Доставка по РФ и СНГ
+
+        .header-component-bottom
+            nav.nav
+                ul.nav__list
+                    li.nav__item.has-submenu
+                        a.nav__link(href="#") Каталог товаров
+
+                        ul.nav-dropdown
+                            li.nav-dropdown__item
+                                a.nav-dropdown__link(href="#") Свадебная бижутерия
+                            li.nav-dropdown__item
+                                a.nav-dropdown__link(href="#") Аксессуары для волос
+                            li.nav-dropdown__item
+                                a.nav-dropdown__link(href="#") Броши
+                            li.nav-dropdown__item.has-dropdown
+                                a.nav-dropdown__link(href="#") Мужские аксессуары
+
+                                ul.nav-dropdown
+                                    li.nav-dropdown__item.nav-dropdown__title МУЖСКАЯ БИЖУТЕРИЯ
+                                    li.nav-dropdown__item
+                                        a.nav-dropdown__link(href="#") Браслеты
+                                    li.nav-dropdown__item
+                                        a.nav-dropdown__link(href="#") Кулоны
+                                    li.nav-dropdown__item
+                                        a.nav-dropdown__link(href="#") Зажимы и запонки
+                            li.nav-dropdown__item
+                                a.nav-dropdown__link(href="#") Клатчи
+                            li.nav-dropdown__item
+                                a.nav-dropdown__link(href="#") Детская бижутерия
+                            li.nav-dropdown__item
+                                a.nav-dropdown__link(href="#") Демонстрационное оборудование
+
+                    li.nav__item
+                        a.nav__link(href="#") Условия работы
+                    li.nav__item
+                        a.nav__link(href="#") Скидки
+                    li.nav__item
+                        a.nav__link(href="#") Оплата и доставка
+                    li.nav__item
+                        a.nav__link(href="#") Документы
+                    li.nav__item
+                        a.nav__link(href="#") Контакты
+
+            .user-panel
+                a.cart(href="#")
+                    .cart__icon
+                    .cart__wrapp
+                        label.cart__count 10
+                        .cart__text ТОВАРОВ
+                        label.cart__price 56 789
+
+                .login
+                    a.login__link(href="#") Войти
+

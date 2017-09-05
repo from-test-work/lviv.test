@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <meta name="keywords" content="">
+    <title>Главная</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <!--BEGIN BODY-->
+    <body class="loaded">
+      <ul class="mob-navigation">
+        <li class="mob-navigation__item"><a class="menu-trigger m-toggler" id="m-toggler" href="#">
+            <div class="m-toggler-bars">
+              <div class="m-toggler__bar"></div>
+              <div class="m-toggler__bar"></div>
+              <div class="m-toggler__bar"></div>
+            </div></a>
+          <nav class="nav" id="slide-menu">
+            <ul class="nav__list">
+              <li class="nav__item has-submenu"><a class="nav__link" href="#">Каталог товаров</a>
+                <ul class="nav-dropdown">
+                  <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Свадебная бижутерия</a></li>
+                  <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Аксессуары для волос</a></li>
+                  <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Броши</a></li>
+                  <li class="nav-dropdown__item has-dropdown"><a class="nav-dropdown__link" href="#">Мужские аксессуары</a>
+                    <ul class="nav-dropdown">
+                      <li class="nav-dropdown__item nav-dropdown__title">МУЖСКАЯ БИЖУТЕРИЯ</li>
+                      <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Браслеты</a></li>
+                      <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Кулоны</a></li>
+                      <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Зажимы и запонки</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Клатчи</a></li>
+                  <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Детская бижутерия</a></li>
+                  <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Демонстрационное оборудование</a></li>
+                </ul>
+              </li>
+              <li class="nav__item"><a class="nav__link" href="#">Условия работы</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Скидки</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Оплата и доставка</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Документы</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </li>
+        <li class="mob-navigation__item"><a class="m-home" href="/"><img src="../static/img/m.home.png" alt="m-home" width="20" height="16"></a></li>
+        <li class="mob-navigation__item"><a class="m-search" id="m-search" href="#"><img src="../static/img/m.search.png" alt="m-search"></a></li>
+        <li class="mob-navigation__item"><a class="m-cart" href="#"><img src="../static/img/m.cart.png" alt="m-cart"></a></li>
+        <li class="mob-navigation__item"><a class="m-user" href="#"><img src="../static/img/m.user.png" alt="m-user"></a></li>
+        <li class="mob-navigation__item"><a class="m-phone" href="tel:+78007078139"><img src="../static/img/m.phone.png" alt="m-phone"></a></li>
+      </ul>
+      <div class="main-wrapper">
+        <!--BEGIN CONTENT-->
+        <main class="content">
+          <div class="wrapper">
+            <div class="sl">
+              <div class="sl__slide"><img class="sl__img" src="static/img/slick-slide.png" alt="" data-attr="web"><img class="sl__img" src="static/img/m-slide.jpg" alt="" data-attr="ios">
+                <div class="sl__cnt">
+                  <div class="sl__title">Новая коллекция<br/>SWAROVSKI уже здесь!</div>
+                </div>
+              </div>
+              <div class="sl__slide"><img class="sl__img" src="static/img/slick-slide.png" alt="" data-attr="web"><img class="sl__img" src="https://static.tumblr.com/24d4dfbfa5b3fbd58479ab946c2b2dc7/dlnhnqs/0pcn57yzy/tumblr_static_tumblr_static_74h9asozl6gwgg0ookkc4gow4_640.jpg" alt="" data-attr="ios">
+                <div class="sl__cnt">
+                  <div class="sl__title">НоваЯ коллекция<br/>SWAROVSKI уже здесь!</div>
+                </div>
+              </div>
+              <div class="sl__slide"><img class="sl__img" src="static/img/slick-slide.png" alt="" data-attr="web"><img class="sl__img" src="https://static.tumblr.com/3c837d2cb829181d4fddd8c1c8e76073/ljdo11l/DbVobzj45/tumblr_static_tumblr_static__640.jpg" alt="" data-attr="ios">
+                <div class="sl__cnt">
+                  <div class="sl__title">Новая коллекция<br/>SWAROVSKI уже здесь!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!--CONTENT EOF-->
+        <!--BEGIN HEADER-->
+        <header>
+          <div class="wrapper">
+            <div class="header-component-top">
+              <!-- - Brand --->
+              <div class="brand"><a class="brand__logo" href="/"><img class="brand__img" src="../static/img/brand.png" alt="brand logo"></a>
+                <div class="brand__text">Интернет-магазин «Благой арт»</div>
+              </div>
+              <!-- - Search --->
+              <form class="form-search" id="form-search" action="#">
+                <div class="form-group placeholder-color placeholder-effect2 placeholder-overflow">
+                  <label class="search-submit search-submit__right">
+                    <input class="form-input" type="search" placeholder="Введите название или артикул">
+                    <input type="submit" value="">
+                  </label>
+                </div>
+              </form>
+              <!-- - Contact Info --->
+              <div class="contact">
+                <div class="contact__phone"><a class="phone" href="tel:+78007078139">+7 (800) 707-81-39</a></div>
+                <div class="contact__work work">
+                  <div class="work__week">ПН-ПТ с 9:00 до 18:00</div>
+                  <div class="work__delivery">Доставка по РФ и СНГ</div>
+                </div>
+              </div>
+            </div>
+            <div class="header-component-bottom">
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item has-submenu"><a class="nav__link" href="#">Каталог товаров</a>
+                    <ul class="nav-dropdown">
+                      <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Свадебная бижутерия</a></li>
+                      <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Аксессуары для волос</a></li>
+                      <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Броши</a></li>
+                      <li class="nav-dropdown__item has-dropdown"><a class="nav-dropdown__link" href="#">Мужские аксессуары</a>
+                        <ul class="nav-dropdown">
+                          <li class="nav-dropdown__item nav-dropdown__title">МУЖСКАЯ БИЖУТЕРИЯ</li>
+                          <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Браслеты</a></li>
+                          <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Кулоны</a></li>
+                          <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Зажимы и запонки</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Клатчи</a></li>
+                      <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Детская бижутерия</a></li>
+                      <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Демонстрационное оборудование</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav__item"><a class="nav__link" href="#">Условия работы</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#">Скидки</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#">Оплата и доставка</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#">Документы</a></li>
+                  <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+                </ul>
+              </nav>
+              <div class="user-panel"><a class="cart" href="#">
+                  <div class="cart__icon"></div>
+                  <div class="cart__wrapp">
+                    <label class="cart__count">10</label>
+                    <div class="cart__text">ТОВАРОВ</div>
+                    <label class="cart__price">56 789</label>
+                  </div></a>
+                <div class="login"><a class="login__link" href="#">Войти</a></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!--HEADER EOF-->
+        <!--BEGIN FOOTER-->
+        <footer>
+          <div class="wrapper"></div>
+        </footer>
+        <!--FOOTER EOF-->
+      </div>
+      <div class="icon-load"></div>
+    </body>
+    <!--BODY EOF-->
+    <script src="static/js/jquery-3.0.0.min.js"></script>
+    <script src="static/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="static/js/components/slick.min.js"></script>
+    <script src="static/js/custom.js"></script>
+  </head>
+</html>

@@ -1,0 +1,9 @@
+.user-panel{
+  display: flex;
+}
+
+.user-panel{
+  .cart + .login{
+    margin-left: 20px;
+  }
+}

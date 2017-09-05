@@ -1,0 +1,42 @@
+.login{
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14px;
+  font-weight: 700;  
+  &__link{
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    color: #252a54;
+    padding-left: 27px;
+  }
+  &:before{
+    position: absolute;
+    content: '';
+    top: 50%;
+  
+    left: 0;
+    width: 19px;
+    height: 17px;
+    background: url("../../static/img/user.png") no-repeat center center / cover;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (min-width:768px) and (max-width:1199px) {
+  .login{
+    font-size: 10px;
+
+    &__link{
+      &:before{
+        width: 16px;
+        height: 14px;
+      }
+    }
+  }
+}
